@@ -1,5 +1,5 @@
 # GitHubCalendar  
-#### Rainmeter skin which displays your GitHub contribution calendar on your desktop  
+#### A customizable Rainmeter skin which displays your GitHub contribution calendar on your desktop  
 <br>  
   <p align="center">
   <img src="https://github.com/JonSn0w/Rainmeter_GitHubCalendar/blob/master/@Resources/preview/Preview.gif" width="700" title="Preview">
