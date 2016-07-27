@@ -8,7 +8,7 @@
   Author: Brett Stevenson  
   Contact: BStevensonDev@gmail.com  
   Version: 1.1  
-  License: Creative Commons Attribution-ShareAlike 4.0
+  License: BSD 3-Clause
   <br>
 
 *********************************************************************************************************
