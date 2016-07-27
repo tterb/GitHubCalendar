@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # GitHubCalendar  
 ##### Rainmeter skin which displays your GitHub contribution calendar on your desktop  
 <br>
