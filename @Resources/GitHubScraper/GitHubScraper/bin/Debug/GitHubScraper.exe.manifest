@@ -25,7 +25,6 @@
 
          If you want to utilize File and Registry Virtualization for backward 
          compatibility then delete the requestedExecutionLevel node.
-<<<<<<< HEAD
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -44,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GitHubScraper.exe" size="379816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GitHubScraper.exe" size="109480">
       <assemblyIdentity name="GitHubScraper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9Gkb6Yq/AerHUtkeMfhZuOK8v6x7Y+xF76e2QUAp8Ro=</dsig:DigestValue>
+        <dsig:DigestValue>m9J/YDxWvYjLsRB4fvP9ByXxv2Ap6jo45SxvVXyeeSA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -67,13 +66,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="GitHubGraphicon.ico" size="370070">
+  <file name="GitHubGraphicon.ico" size="99678">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Szksx34VLw8e7OA4q8ERSrODvFaIn+YtuRukWvU1qdk=</dsig:DigestValue>
+      <dsig:DigestValue>R7jgp+nQg1PXHtxsp3Tvt3SoQkF2t7+4NgOlwXW0GME=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GitHubScraper.exe.config" size="189">
@@ -103,83 +102,4 @@
       <dsig:DigestValue>yLyMmBMg7088f+KqMLEDXG0a1hlIUzmTNpcqeKP3Qgc=</dsig:DigestValue>
     </hash>
   </file>
-=======
-    -->
-        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
-      </requestedPrivileges>
-    </security>
-  </trustInfo>
-  <dependency>
-    <dependentOS>
-      <osVersionInfo>
-        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
-      </osVersionInfo>
-    </dependentOS>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GitHubScraper.exe" size="379816">
-      <assemblyIdentity name="GitHubScraper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9Gkb6Yq/AerHUtkeMfhZuOK8v6x7Y+xF76e2QUAp8Ro=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.dll" size="1579008">
-      <assemblyIdentity name="WebDriver" version="2.53.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yLyMmBMg7088f+KqMLEDXG0a1hlIUzmTNpcqeKP3Qgc=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <file name="GitHubGraphicon.ico" size="370070">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Szksx34VLw8e7OA4q8ERSrODvFaIn+YtuRukWvU1qdk=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="GitHubScraper.exe.config" size="189">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="phantomjs.exe" size="18587648">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HPmyqnMr0MZag8VdlrqYxO1GK5NyDX/YwLzFNoO/z/s=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="WebDriver.dll" size="1579008">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yLyMmBMg7088f+KqMLEDXG0a1hlIUzmTNpcqeKP3Qgc=</dsig:DigestValue>
-    </hash>
-  </file>
->>>>>>> f77a9c7e88c6321cb942481ef37227e243d13a1f
 </asmv1:assembly>
