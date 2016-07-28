@@ -43,28 +43,28 @@ function Initialize()
 		end
 		-- Set the color of the square
 		local color = string.sub(fill, 2)
-		if contribs >= 3 then
-			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color1#")
-		elseif contribs >=7 then
-			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color2#")
-		elseif contribs >= 10 then
-			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color3#")
-		elseif contribs >= 15  then
-			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color4#")
-		else
-			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#EmptyColor#")
-		end
-		-- if color ==  "d6e685" then
+		-- if contribs >= 3 then
 		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color1#")
-		-- elseif color ==  "8cc665" then
+		-- elseif contribs >=7 then
 		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color2#")
-		-- elseif color ==  "44a340" then
+		-- elseif contribs >= 10 then
 		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color3#")
-		-- elseif color == "1e6823"  then
+		-- elseif contribs >= 15  then
 		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color4#")
 		-- else
 		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#EmptyColor#")
 		-- end
+		if color ==  "d6e685" then
+			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color1#")
+		elseif color ==  "8cc665" then
+			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color2#")
+		elseif color ==  "44a340" then
+			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color3#")
+		elseif color == "1e6823"  then
+			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color4#")
+		else
+			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#EmptyColor#")
+		end
 		--Set the date of the square as ToolTipText
 		--Set square to display contributions on mouse-over action
 		if(string.len(date) >= 8) then
@@ -103,28 +103,28 @@ function Update( )
 				date = table[3*i]
 				local squareMeter = "Square" .. i
 				local color = string.sub(fill, 2)
-				if contribs >= 3 then
-					SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color1#")
-				elseif contribs >=7 then
-					SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color2#")
-				elseif contribs >= 10 then
-					SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color3#")
-				elseif contribs >= 15  then
-					SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color4#")
-				else
-					SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#EmptyColor#")
-				end
-				-- if color ==  "d6e685" then
-				-- 	SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color1#")
-				-- elseif color ==  "8cc665" then
-				-- 	SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color2#")
-				-- elseif color ==  "44a340" then
-				-- 	SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color3#")
-				-- elseif color == "1e6823"  then
-				-- 	SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color4#")
+				-- if contribs >= 3 then
+				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color1#")
+				-- elseif contribs >=7 then
+				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color2#")
+				-- elseif contribs >= 10 then
+				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color3#")
+				-- elseif contribs >= 15  then
+				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color4#")
 				-- else
-				-- 	SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#EmptyColor#")					
+				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#EmptyColor#")
 				-- end
+				if color ==  "d6e685" then
+					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color1#")
+				elseif color ==  "8cc665" then
+					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color2#")
+				elseif color ==  "44a340" then
+					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color3#")
+				elseif color == "1e6823"  then
+					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color4#")
+				else
+					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#EmptyColor#")					
+				end
 			--Set the date of the square as ToolTipText
 			--Set square to display contributions on mouse-over action
 				if(string.len(date) >= 8) then
