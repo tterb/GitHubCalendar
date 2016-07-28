@@ -8,7 +8,6 @@ Color3=80,155,75,250
 Color4=10,105,6,250
 TextColor=255,255,255,210
 TextFont=Serif
-StringStyle=NORMAL
 TextSize=9
 TextGap=20
 Radius=6
@@ -17,14 +16,6 @@ SquareSize=(#Radius# * 2)
 TextWidth=((#SquareGap# * 2) + #SquareSize#)
 ScraperPath="#@#GitHubScraper/GitHubScraper/bin/Debug/GitHubScraper.exe"
 ProfilePath="https://github.com/#USERNAME#"
-
-Font1=Trebuchet MS
-Font2=NewMedia
-LocalFontFace=NewMedia
-LocalFontFace2=NewMedia Fett
-LocalFontFace3=ITC Avant Garde Pro Md
-LocalFontFace4=ITC Avant Garde Pro XLt
-
 
 [BackgroundStyle]
 ImageName=#@#images/background.png
@@ -63,7 +54,6 @@ FontFace=#TextFont#
 FontSize=#TextSize#
 FontColor=#TextColor#
 StringAlign=CENTER
-StringStyle=#TextStyle#
 AntiAlias=1
 
 [WeekStartStyle]
@@ -80,7 +70,7 @@ H=#Radius#
 W=#Radius#
 
 [ConfigDesc]
-FontFace=#LocalFontFace#
+FontFace=#TextFont#
 FontSize=14
 StringStyle=Bold
 FontColor=230,230,230,240
