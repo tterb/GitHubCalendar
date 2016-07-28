@@ -248,3 +248,8 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+@Resources/images/github_logoLG.png
+@Resources/images/settings-.png
+@Resources/images/Button_2.png
+@Resources/images/configback2.png
+@Resources/images/configback_plain.png

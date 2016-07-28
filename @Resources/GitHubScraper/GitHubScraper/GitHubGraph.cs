@@ -29,7 +29,7 @@ namespace GitHubScraper {
         static void Main(){
             string currentPath = GetDirectory();
             currentPath.Substring(0, currentPath.Length - 9);
-            var driverService = PhantomJSDriverService.CreateDefaultService(currentPath + "phantomJS");
+            var driverService = PhantomJSDriverService.CreateDefaultService();
             driverService.HideCommandPromptWindow = true;
             IWebDriver driver = new PhantomJSDriver(driverService);
             driver.Navigate().GoToUrl("http://github.com/" + Username);
