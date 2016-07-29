@@ -1,5 +1,4 @@
 [Variables]
-
 Contribs=0
 EmptyColor=155,155,155,55
 Color1=239,255,158,200
