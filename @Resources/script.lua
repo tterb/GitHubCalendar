@@ -24,7 +24,6 @@ function Initialize()
 	--Loop that writes the values for each block 
 	for i=1, 70 do
 		local squareMeter = "Square" .. i
-		local activeMeter = "Active"
 		SKIN:Bang("!WriteKeyValue", squareMeter, "Meter", "Bar")
 		-- Reads values from C# txt file and stores them in lists
 		local contribs = file:read("*line")
@@ -43,17 +42,6 @@ function Initialize()
 		end
 		-- Set the color of the square
 		local color = string.sub(fill, 2)
-		-- if contribs >= 3 then
-		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color1#")
-		-- elseif contribs >=7 then
-		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color2#")
-		-- elseif contribs >= 10 then
-		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color3#")
-		-- elseif contribs >= 15  then
-		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color4#")
-		-- else
-		-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#EmptyColor#")
-		-- end
 		if color ==  "d6e685" then
 			SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color1#")
 		elseif color ==  "8cc665" then
@@ -86,58 +74,44 @@ end
 -- ##############################################################################
 
 function Update( )
-	local dataFile=SKIN:GetVariable('dataPath')
-	local readFile = io.open(dataFile, "r") 
-	readFile:read("*line") 
-	readFile:read("*line")
-	local testDate = readFile:read("*line")
-	local MyMeter = SKIN:GetMeter('Square1')
-	if testDate == MyMeter:GetOption('ToolTipText') then 	--It's not a new week
-		-- local contents = readFile:read("*all")    -- capture file in a string
-		-- local table = textutils.unserialize(contents) -- convert string to table
-		local count = 1
-		for line in readFile:lines() do
-			if count > 189 then
-				contribs = table[(3*i)-2]
-				fill = table[(3*i)-1]
-				date = table[3*i]
-				local squareMeter = "Square" .. i
-				local color = string.sub(fill, 2)
-				-- if contribs >= 3 then
-				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color1#")
-				-- elseif contribs >=7 then
-				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color2#")
-				-- elseif contribs >= 10 then
-				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color3#")
-				-- elseif contribs >= 15  then
-				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#Color4#")
-				-- else
-				-- 	SKIN:Bang('!WriteKeyValue', squareMeter, 'SolidColor', "#EmptyColor#")
-				-- end
-				if color ==  "d6e685" then
-					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color1#")
-				elseif color ==  "8cc665" then
-					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color2#")
-				elseif color ==  "44a340" then
-					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color3#")
-				elseif color == "1e6823"  then
-					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color4#")
-				else
-					SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#EmptyColor#")					
-				end
-			--Set the date of the square as ToolTipText
-			--Set square to display contributions on mouse-over action
-				if(string.len(date) >= 8) then
-					SKIN:Bang('!SetOption', squareMeter, 'ToolTipText', date)
-					SKIN:Bang('!SetOption', squareMeter, 'MouseOverAction', '[!SetOption Active Text "Contributions: ' ..contribs ..'"][!UpdateMeter Active][!Redraw]')
-				else
-					SKIN:Bang('!SetOption', squareMeter, 'ToolTipText', "")
-					SKIN:Bang('!SetOption', squareMeter, 'MouseOverAction', '[!SetOption Active Text ""][!UpdateMeter Active][!Redraw]')
-				end
+	local dataPath = SKIN:GetVariable('DataPath')
+	local checkFile = io.open(dataPath, "r") 
+	checkFile:read("*line") 
+	checkFile:read("*line")
+	local testDate = checkFile:read("*line")
+	-- checkFile.close()
+	local Meter = SKIN:GetMeter('Square1')
+	if testDate ~= Meter:GetOption('ToolTipText') then     --It's a new week
+		Initialize()
+	else
+		local weekPath = SKIN:GetVariable('WeekPath')
+		local file = io.open(weekPath, "r")
+		for i=64, 70 do
+			local contribs = file:read("*line")
+			local fill = file:read("*line")
+			local date = file:read("*line")
+			local squareMeter = SKIN:GetMeter('Square'..i)
+			local color = string.sub(fill, 2)
+			if color ==  "d6e685" then
+				SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color1#")
+			elseif color ==  "8cc665" then
+				SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color2#")
+			elseif color ==  "44a340" then
+				SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color3#")
+			elseif color == "1e6823"  then
+				SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color4#")
+			else
+				SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#EmptyColor#")					
+			end
+			--Set square to display contributions on mouse-over action and date as tooltip
+			if(string.len(date) >= 8) then
+				SKIN:Bang('!SetOption', squareMeter, 'ToolTipText', date)
+				SKIN:Bang('!SetOption', squareMeter, 'MouseOverAction', '[!SetOption Active Text "Contributions: ' ..contribs ..'"][!UpdateMeter Active][!Redraw]')
+			else
+				SKIN:Bang('!SetOption', squareMeter, 'ToolTipText', "")
+				SKIN:Bang('!SetOption', squareMeter, 'MouseOverAction', '[!SetOption Active Text ""][!UpdateMeter Active][!Redraw]')
 			end
 		end
-	else
-		Initialize();
 	end
-	readFile.close();
+	-- readFile.close()
 end

@@ -5,138 +5,138 @@ using System.Text;
 using OpenQA.Selenium;
 using OpenQA.Selenium.PhantomJS;
 
-/*********************************************************************************** 
-   _________________________________GitHubScraper_________________________________
+/************************************************************************************ 
+   _________________________________GitHubScraper__________________________________
  * This program uses Selenium's WebDriver & phantomJS, in order to scrape the 
  * contributions, fills, and active dates from a Github user's profile.
  *
  * To configure this file for your own use, replace the "Username" variable with 
  * your own GitHub username.
 
- ***********************************************************************************/
+ ************************************************************************************/
 
 namespace GitHubScraper {
 
     class GraphScraper {
 
-        private static readonly string Username = "JonSn0w";  /* <--- Change this -- */
-        private static readonly string[] Days = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-        private static readonly string[] Months = { "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" };
-        public static DateTime Today { get; }
+        private static readonly string[] DaysofWeek = { "Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat" };
         public static DateTime ThisDay = DateTime.Today;
-        private static int count;
 
-        static void Main(){
-            string currentPath = GetDirectory();
-            currentPath.Substring(0, currentPath.Length - 9);
+        static void Main() {
+            string username = File.ReadAllText(GetDirectory() + "/config.txt");
+            Console.WriteLine("Username: " + username);
             var driverService = PhantomJSDriverService.CreateDefaultService();
             driverService.HideCommandPromptWindow = true;
             IWebDriver driver = new PhantomJSDriver(driverService);
-            driver.Navigate().GoToUrl("http://github.com/" + Username);
+            driver.Navigate().GoToUrl("http://github.com/" + username);
             ArrayList list = new ArrayList();
-            // Stack stack = new Stack();
             try {
-                var calendarElements = driver.FindElement(By.Id("contributions-calendar"))
-                                             .FindElement(By.ClassName("js-calendar-graph"))
-                                             .FindElements(By.TagName("g"));
-                int remainder = 0;
-                for (int i = 0; i < Days.Length; i++){
-                    if (Days[i] == DateTime.Now.ToString("dddd"))
-                        remainder = 6 - i;
-                }
-                foreach (var calElement in calendarElements){
-                    if (count < calendarElements.Count - 10)
-                        count++;
-                    else {
-                        var rectElements = calElement.FindElements(By.TagName("rect"));
-                        foreach (var rect in rectElements){
-                            string color = rect.GetAttribute("fill");
-                            int contribCount = int.Parse(rect.GetAttribute("data-count"));
-                            string dataDate = rect.GetAttribute("data-date");
-                            Block b = new Block(contribCount, color, dataDate);
-                            // stack.Push(b);
-                            list.Add(b);
-                        }
+                Console.WriteLine("Connected.");
+                var contribCalendar = driver.FindElement(By.Id("contributions-calendar"))
+                                            .FindElement(By.ClassName("js-calendar-graph"))
+                                            .FindElements(By.TagName("g"));
+                Console.WriteLine("Grabbing data...");
+                for (int i = contribCalendar.Count - 10; i < contribCalendar.Count; i++){
+                    Console.Write("*");
+                    var week = contribCalendar[i];
+                    var rectElements = week.FindElements(By.TagName("rect"));
+                    foreach (var rect in rectElements){
+                        string fill = rect.GetAttribute("fill");
+                        int contribCount = int.Parse(rect.GetAttribute("data-count"));
+                        string date = rect.GetAttribute("data-date");
+                        Block b = new Block(contribCount, fill, date);
+                        list.Add(b);
                     }
                 }
-                driver.Quit(); //close the webdriver & phantomJS
-
-                // create placeholders for the rest of the week
-                while (remainder > 0){
-                    Block b = new Block(0, "#eeeee", "TBD");
-                    // stack.Push(b);
-                    list.Add(b);
-                    remainder--;
-                }
-                WriteToFile(list, "/data.txt");
-                // WriteToFile(stack, "/data.txt");
+                Console.WriteLine("");
+            } catch (NoSuchElementException e) {
+                Console.WriteLine(e);
             }
-            catch (NoSuchElementException e){
-                
-            }
-            driver.Quit();
+            driver.Quit(); //close the webdriver & phantomJS  
             driver.Dispose();
+
+            FillWeek(list);
+            ArrayList weekData = GetCurrentWeek(list); 
+            WriteToFile(list, "/data.txt");
+            WriteToFile(weekData, "/week.txt");
+            Console.WriteLine("Done.");
+            Environment.Exit(0);
         }
+
 
         private static string GetDirectory(){
             string path = Directory.GetCurrentDirectory();
-            return path.Substring(0, path.Length - 9);
+            return path.Substring(0, path.Length - 37);
+        }
+
+        private static void FillWeek(ArrayList list) {
+            int tba = 6;
+            for(int i = 0; i < DaysofWeek.Length; i++)
+                if (DaysofWeek[i] == DateTime.Now.ToString("ddd"))
+                    tba -= i;
+            while(tba > 0){
+                // create placeholders for the rest of the week
+                Block b = new Block(0, "#eeeee", "TBD");
+                list.Add(b);
+                tba--;
+            }
+        }
+
+        private static ArrayList GetCurrentWeek(ArrayList list){
+            ArrayList weekData = new ArrayList();
+            for(int i = list.Count-8; i < list.Count; i++)
+                weekData.Add(list[i]);
+            return weekData;
         }
 
         private static void WriteToFile(ArrayList list, string filename) {
-            string path = GetDirectory();
-            path = path.Substring(0, path.Length - 28) + filename;
-            StreamWriter file = new StreamWriter(path);
-            foreach (Block b in list){
+            StreamWriter file = new StreamWriter(GetDirectory() + filename);
+            foreach (Block b in list)
                 file.WriteLine(b.ToDataString());
-            }
             file.Close();
         }
 
 
-        class Block{
-            private int contributions;
-            private string fill;
-            private int day;
-            private string dayOfWeek;
-            private int month;
-            private int year;
+        private class Block {
+            private readonly int _contributions;
+            private readonly string _fill;
+            private int _day;
+            private int _month;
+            private int _year;
 
             public Block(int contributions, string fill, string date){
-                this.contributions = contributions;
-                this.fill = fill;
+                _contributions = contributions;
+                _fill = fill;
                 GetInfo(date);
             }
 
             private void GetInfo(string dataDate){
                 if (dataDate.Equals("TBD")){
-                    year = -1;
+                    _year = -1;
                 }
                 else {
-                    year = int.Parse(dataDate.Substring(0, 4));
-                    month = int.Parse(dataDate.Substring(5, 2));
-                    day = int.Parse(dataDate.Substring(8, 2));
+                    _year = int.Parse(dataDate.Substring(0, 4));
+                    _month = int.Parse(dataDate.Substring(5, 2));
+                    _day = int.Parse(dataDate.Substring(8, 2));
                 }
             }
 
             private string GetDate(){
-                if (year < 0)
+                if (_year < 0)
                     return "TBD";
-                return month + "/" + day + "/" + year;
+                return _month + "/" + _day + "/" + _year;
             }
 
             public string ToDataString(){
                 StringBuilder sb = new StringBuilder("");
-                sb.Append(contributions);
+                sb.Append(_contributions);
                 sb.Append(Environment.NewLine);
-                sb.Append(fill);
+                sb.Append(_fill);
                 sb.Append(Environment.NewLine);
                 sb.Append(GetDate());
                 return sb.ToString();
             }
-
         }
 
     }
-
 }
