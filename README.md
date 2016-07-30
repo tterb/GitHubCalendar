@@ -1,6 +1,6 @@
 # GitHubCalendar  
 #### A customizable Rainmeter skin which displays your GitHub contribution calendar on your desktop  
-<br>  
+
   <p align="center">
   <img src="https://github.com/JonSn0w/Rainmeter_GitHubCalendar/blob/master/@Resources/preview/Preview.gif" width="700" title="Preview">
   </p>
@@ -33,8 +33,10 @@
   provides the necessary information to the GitHubCalendar skin.  
     
 ***In Progress:***  
+  * Full integration of user config menu
   * Improve optimmization of the update processes.
   * Experimenting with different data collection methods
+  * Add mutable scale functionality to calendar skin
   
   <br/>
 
