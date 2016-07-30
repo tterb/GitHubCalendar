@@ -8,7 +8,7 @@
   Author: Brett Stevenson  
   Contact: BStevensonDev@gmail.com  
   Version: 1.1  
-  License: BSD 3-Clause
+  [License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE)
   <br>
 
 *********************************************************************************************************
