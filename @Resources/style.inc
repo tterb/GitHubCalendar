@@ -76,12 +76,3 @@ FontColor=230,230,230,240
 StringEffect=Shadow
 FontEffectColor = 0,0,0,200
 
-[ConfigTextField]
-FontFace=Monospaced
-FontSize=11
-StringStyle=Bold
-StringEffect=Shadow
-SolidColor=80,80,80,185
-FontColor=120,120,120, 200
-FontEffectColor = 0,0,0,100
-AntiAlias=1

@@ -1,9 +1,9 @@
 -- ## Information ###################################################################
--- Filename:  script.lua
--- Author:  Brett Stevenson
--- Project:  GitHubCalendar
--- License:  Creative Commons Attribution-Non-Commercial-Share Alike 3.0
--- Updated:	July 7, 2016
+-- Filename: script.lua
+-- Author: Brett Stevenson
+-- Project: GitHubCalendar
+-- License: BSD 3-Clause 
+-- Updated:	 July 26, 2016
 -- ###############################################################################
 
 -- ## Description ###################################################################
