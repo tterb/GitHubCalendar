@@ -10,9 +10,22 @@
   Version: 1.1  
   [License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE)
   <br>
+  
+*********************************************************************************************************  
+  
+##DESCRIPTION:  
+  This skin features a C# program, which collectively uses [Selenium Webdriver](http://www.seleniumhq.org/projects/webdriver/) and [phantomJS](http://phantomjs.org) to gather the data from the  
+  user's GitHub profile and stores it to the *data.txt* file. The data is then read by the Lua script, which 
+  provides the necessary information to the GitHubCalendar skin.  
+    
+####In Progress:  
+  * Improve optimmization of the update processes.
+  * Experiment with different data collection methods.
+  * Add mutable scaling functionality to calendar.
+  
+  <br/>
 
 *********************************************************************************************************
-  <br>
   
 ##SETUP:  
   * This skin requires that you have **Rainmeter** installed, which you can download [here](https://www.rainmeter.net/).
@@ -23,21 +36,5 @@
 <br>
   ***Note:*** To update the skin's calendar data, left-click the ![alt tag](https://github.com/JonSn0w/Rainmeter_GitHubCalendar/blob/master/@Resources/preview/github_logo.png?raw=true) in the corner of the skin. 
 <br/>
-<br/>
 
 *********************************************************************************************************  
-  <br>
-##INFO:  
-  This skin features a C# program, which collectively uses [Selenium Webdriver](http://www.seleniumhq.org/projects/webdriver/) and [phantomJS](http://phantomjs.org) to gather the data from the  
-  user's GitHub profile and stores it to the *data.txt* file. The data is then read by the Lua script, which 
-  provides the necessary information to the GitHubCalendar skin.  
-    
-***In Progress:***  
-  * Full integration of user config menu
-  * Improve optimmization of the update processes.
-  * Experimenting with different data collection methods
-  * Add mutable scale functionality to calendar skin
-  
-  <br/>
-
-*********************************************************************************************************** 
