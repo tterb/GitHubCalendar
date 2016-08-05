@@ -18,11 +18,9 @@ using OpenQA.Selenium.PhantomJS;
 namespace GitHubScraper {
 
     class GraphScraper {
-
-        private static readonly string[] DaysofWeek = { "Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat" };
-        public static DateTime ThisDay = DateTime.Today;
-
-        static void Main() {
+ 
+        static void Main(){
+            Console.SetWindowSize(50, 15);
             string username = File.ReadAllText(GetDirectory() + "/config.txt");
             Console.WriteLine("Username: " + username);
             var driverService = PhantomJSDriverService.CreateDefaultService();
@@ -35,31 +33,29 @@ namespace GitHubScraper {
                 var contribCalendar = driver.FindElement(By.Id("contributions-calendar"))
                                             .FindElement(By.ClassName("js-calendar-graph"))
                                             .FindElements(By.TagName("g"));
-                Console.WriteLine("Grabbing data...");
+                int range = contribCalendar.Count - 10;
                 for (int i = contribCalendar.Count - 10; i < contribCalendar.Count; i++){
-                    Console.Write("*");
-                    var week = contribCalendar[i];
-                    var rectElements = week.FindElements(By.TagName("rect"));
+                    Console.Write('\r'+"Grabbing data..."+(i-range)*10+"%");
+                    var rectElements = contribCalendar[i].FindElements(By.TagName("rect"));
                     foreach (var rect in rectElements){
                         string fill = rect.GetAttribute("fill");
                         int contribCount = int.Parse(rect.GetAttribute("data-count"));
                         string date = rect.GetAttribute("data-date");
-                        Block b = new Block(contribCount, fill, date);
-                        list.Add(b);
+                        list.Add(new Block(contribCount, fill, date));
                     }
                 }
-                Console.WriteLine("");
+                Console.WriteLine('\r' + "Grabbing data...100%");
             } catch (NoSuchElementException e) {
                 Console.WriteLine(e);
             }
-            driver.Quit(); //close the webdriver & phantomJS  
+            driver.Quit();   //close the webdriver  
             driver.Dispose();
 
             FillWeek(list);
-            ArrayList weekData = GetCurrentWeek(list); 
+            Console.WriteLine("Done.");
+            ArrayList weekData = GetCurrentWeek(list);
             WriteToFile(list, "/data.txt");
             WriteToFile(weekData, "/week.txt");
-            Console.WriteLine("Done.");
             Environment.Exit(0);
         }
 
@@ -70,15 +66,11 @@ namespace GitHubScraper {
         }
 
         private static void FillWeek(ArrayList list) {
-            int tba = 6;
-            for(int i = 0; i < DaysofWeek.Length; i++)
-                if (DaysofWeek[i] == DateTime.Now.ToString("ddd"))
-                    tba -= i;
-            while(tba > 0){
-                // create placeholders for the rest of the week
-                Block b = new Block(0, "#eeeee", "TBD");
-                list.Add(b);
-                tba--;
+            // create placeholders for the rest of the week
+            int tbd = 6 - (int)DateTime.Now.DayOfWeek;
+            while(tbd > 0){
+                list.Add(new Block(0, "#eeeee", "TBD"));
+                tbd--;
             }
         }
 
@@ -111,9 +103,8 @@ namespace GitHubScraper {
             }
 
             private void GetInfo(string dataDate){
-                if (dataDate.Equals("TBD")){
+                if (dataDate.Equals("TBD"))
                     _year = -1;
-                }
                 else {
                     _year = int.Parse(dataDate.Substring(0, 4));
                     _month = int.Parse(dataDate.Substring(5, 2));
@@ -136,6 +127,7 @@ namespace GitHubScraper {
                 sb.Append(GetDate());
                 return sb.ToString();
             }
+
         }
 
     }
