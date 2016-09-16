@@ -1,14 +1,17 @@
-# GitHubCalendar  
-#### Customizable Rainmeter skin for displaying your GitHub contribution calendar on your desktop  
+<img src="https://cloud.githubusercontent.com/assets/16360374/18583398/322d04ba-7bbf-11e6-9964-c1958021561a.png" height="75" title="Logo"> &nbsp;
+<img src="https://cloud.githubusercontent.com/assets/16360374/18583620/88d68768-7bc0-11e6-9baa-2380731c2bd0.png" height="75">
+________________________________________________________________________________________________________
+#### &nbsp;&nbsp;&nbsp;&nbsp;A Rainmeter skin for displaying your GitHub contribution calendar on your desktop  
 <br>
   <p align="center">
   <img src="https://github.com/JonSn0w/Rainmeter_GitHubCalendar/blob/master/@Resources/preview/Preview.gif" width="700" title="Preview">
   </p>
-
-  *Author*: Brett Stevenson  
-  *Contact*: BStevensonDev@gmail.com  
-  *Version*: 1.1  
-  [License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE)
+  <br>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Author*: Brett Stevenson  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Contact*: BStevensonDev@gmail.com  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Version*: 1.1  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE)
   <br>
   
 *********************************************************************************************************  
