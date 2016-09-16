@@ -30,8 +30,7 @@ namespace GitHubScraper {
             ArrayList list = new ArrayList();
             try {
                 Console.WriteLine("Connected.");
-                var contribCalendar = driver.FindElement(By.Id("contributions-calendar"))
-                                            .FindElement(By.ClassName("js-calendar-graph"))
+                var contribCalendar = driver.FindElement(By.ClassName("js-calendar-graph"))
                                             .FindElements(By.TagName("g"));
                 int range = contribCalendar.Count - 10;
                 for (int i = contribCalendar.Count - 10; i < contribCalendar.Count; i++){
