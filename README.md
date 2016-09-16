@@ -37,7 +37,7 @@ ________________________________________________________________________________
   * Press the green button to load your GitHub Contribution Calendar.
   * **Enjoy!**  
 <br>
-  ***Note:*** To update the skin's calendar data, left-click the ![alt tag](https://github.com/JonSn0w/Rainmeter_GitHubCalendar/blob/master/@Resources/preview/github_logo.png?raw=true) in the bottom-right corner of the skin. 
+  ***Note:*** To update the skin's calendar data, left-click the ![alt tag](https://cloud.githubusercontent.com/assets/16360374/18584256/670cf186-7bc4-11e6-9cae-a1e8b5f454ea.png) in the bottom-right corner of the skin. 
 <br/>
 
 *********************************************************************************************************  
