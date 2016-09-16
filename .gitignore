@@ -253,3 +253,6 @@ paket-files/
 @Resources/images/Button_2.png
 @Resources/images/configback2.png
 @Resources/images/configback_plain.png
+@Resources/data.txt
+@Resources/week.txt
+README/*
