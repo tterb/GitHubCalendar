@@ -1,6 +1,6 @@
 <img src="https://cloud.githubusercontent.com/assets/16360374/18583398/322d04ba-7bbf-11e6-9964-c1958021561a.png" height="75" title="Logo"> &nbsp; <img src="https://cloud.githubusercontent.com/assets/16360374/18583620/88d68768-7bc0-11e6-9baa-2380731c2bd0.png" height="70">
 ------------------------------------------------------------------------------------------------------------------------
-#### &nbsp;&nbsp;&nbsp;&nbsp;A Rainmeter skin for displaying your GitHub contribution calendar on your desktop  
+#### &nbsp;&nbsp;&nbsp;&nbsp;A Rainmeter skin that displays your GitHub contribution calendar on your desktop  
 
 <p align="right">
   <a href="https://github.com/JonSn0w/GitHubCalendar/issues">
