@@ -3,6 +3,12 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;A Rainmeter skin for displaying your GitHub contribution calendar on your desktop  
 
 <p align="right">
+  <a href="https://github.com/JonSn0w/GitHubCalendar/issues">
+    <img src="https://img.shields.io/github/issues-raw/badges/shields/website.svg?maxAge=2592000" height="21" title="Issues">
+  </a>
+  <a href="https://github.com/JonSn0w/GithubCalendar/releases">  
+    <img src="https://img.shields.io/github/tag/strongloop/express.svg?maxAge=2592000" height="21" title="Tags">
+  </a>
   <a href="https://gitter.im/Atomic-Design-UI/Lobby">
         <img src="https://badges.gitter.im/GithubCalendar/Lobby.svg" height="21" title="Gitter">
   </a>
@@ -14,10 +20,10 @@
   </p>
   <br>
   
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Author*: Brett Stevenson  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Contact*: BStevensonDev@gmail.com  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Version*: 1.1  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Author*: Brett Stevenson  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Contact*: BStevensonDev@gmail.com  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Version*: 1.1  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE)
   <br>
   
 *********************************************************************************************************  
