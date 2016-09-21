@@ -2,7 +2,12 @@
 ------------------------------------------------------------------------------------------------------------------------
 #### &nbsp;&nbsp;&nbsp;&nbsp;A Rainmeter skin for displaying your GitHub contribution calendar on your desktop  
 
-[![Join the chat at https://gitter.im/JonSn0w/GitHubCalendar](https://badges.gitter.im/JonSn0w/GitHubCalendar.svg)](https://gitter.im/JonSn0w/GitHubCalendar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<p align="right">
+  <a href="https://gitter.im/Atomic-Design-UI/Lobby">
+        <img src="https://badges.gitter.im/GithubCalendar/Lobby.svg" height="21" title="Gitter">
+  </a>
+</p>
+
 <br>
   <p align="center">
   <img src="https://github.com/JonSn0w/Rainmeter_GitHubCalendar/blob/master/@Resources/preview/Preview.gif" width="700" title="Preview">
