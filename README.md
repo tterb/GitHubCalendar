@@ -20,10 +20,10 @@
   </p>
   <br>
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Author*: Brett Stevenson  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Contact*: BStevensonDev@gmail.com  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Version*: v1.1.3  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[License](https://github.com/JonSn0w/GitHubCalendar/blob/master/Documentation/LICENSE)  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Author*: Brett Stevenson  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Contact*: BStevensonDev@gmail.com  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Version*: v1.1.3  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[License](https://github.com/JonSn0w/GitHubCalendar/blob/master/Documentation/LICENSE)  
 <br>
 
 *********************************************************************************************************  
@@ -35,8 +35,7 @@
   * Improve optimization of the update processes.  
   * Experiment with different data collection methods.  
   * Add mutable scaling functionality to calendar.  
-
-  <br/>
+<br>
 
 *********************************************************************************************************
 
