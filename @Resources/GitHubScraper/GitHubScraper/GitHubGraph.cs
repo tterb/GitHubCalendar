@@ -34,9 +34,9 @@ namespace GitHubScraper {
                                             .FindElements(By.TagName("g"));
                 int range = contribCalendar.Count - 10;
                 for (int i = contribCalendar.Count - 10; i < contribCalendar.Count; i++){
-                    Console.Write('\r'+"Grabbing data..."+(i-range)*10+"%");
+                    Console.Write('\r' + "Grabbing data..." + (i-range)*10 + "%");
                     var rectElements = contribCalendar[i].FindElements(By.TagName("rect"));
-                    foreach (var rect in rectElements){
+                    foreach (var rect in rectElements) {
                         string fill = rect.GetAttribute("fill");
                         int contribCount = int.Parse(rect.GetAttribute("data-count"));
                         string date = rect.GetAttribute("data-date");
@@ -59,7 +59,7 @@ namespace GitHubScraper {
         }
 
 
-        private static string GetDirectory(){
+        private static string GetDirectory() {
             string path = Directory.GetCurrentDirectory();
             return path.Substring(0, path.Length - 37);
         }
@@ -67,13 +67,13 @@ namespace GitHubScraper {
         private static void FillWeek(ArrayList list) {
             // create placeholders for the rest of the week
             int tbd = 5 - (int)DateTime.Now.DayOfWeek;
-            while(tbd > 0){
+            while(tbd > 0) {
                 list.Add(new Block(0, "#eeeee", "TBD"));
                 tbd--;
             }
         }
 
-        private static ArrayList GetCurrentWeek(ArrayList list){
+        private static ArrayList GetCurrentWeek(ArrayList list) {
             ArrayList weekData = new ArrayList();
             for(int i = list.Count-7; i < list.Count; i++)
                 weekData.Add(list[i]);
@@ -95,13 +95,13 @@ namespace GitHubScraper {
             private int _month;
             private int _year;
 
-            public Block(int contributions, string fill, string date){
+            public Block(int contributions, string fill, string date) {
                 _contributions = contributions;
                 _fill = fill;
                 GetInfo(date);
             }
 
-            private void GetInfo(string dataDate){
+            private void GetInfo(string dataDate) {
                 if (dataDate.Equals("TBD"))
                     _year = -1;
                 else {
@@ -111,13 +111,13 @@ namespace GitHubScraper {
                 }
             }
 
-            private string GetDate(){
+            private string GetDate() {
                 if (_year < 0)
                     return "TBD";
                 return _month + "/" + _day + "/" + _year;
             }
 
-            public string ToDataString(){
+            public string ToDataString() {
                 StringBuilder sb = new StringBuilder("");
                 sb.Append(_contributions);
                 sb.Append(Environment.NewLine);
