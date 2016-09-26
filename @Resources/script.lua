@@ -1,27 +1,26 @@
 -- ## Information ###################################################################
 -- Filename: script.lua
--- Author: Brett Stevenson
 -- Project: GitHubCalendar
--- License: BSD 3-Clause 
--- Updated:	 July 26, 2016
+-- Author: Brett Stevenson
+-- License: BSD 3-Clause
+-- Updated: Sept 26, 2016
 -- ###############################################################################
 
 -- ## Description ###################################################################
 -- A work-in-progress Lua script, intended to improve the performance/functionality of the
--- GitHubCalendar Rainmeter skin by automating the creation and simplifying the modification 
--- and update processes. 
+-- GitHubCalendar Rainmeter skin by automating the creation and simplifying the modification
+-- and update processes.
 -- ###############################################################################
 
 
--- #### Initialize(): ##################################################################
--- The Initialize() function contains code that will be executed when the skin is loaded from within  
--- Rainmeter or when major changes are made to the data of the skin.
+-- ## Initialize() ##################################################################
+-- The Initialize() function contains code that will be executed when the skin is loaded from within Rainmeter or when major changes are made to the data of the skin.
 -- ##############################################################################
 
 function Initialize()
-	local dataFile=SKIN:GetVariable('dataPath')
+	local dataFile = SKIN:GetVariable('dataPath')
 	local file = io.open(dataFile, "r")
-	--Loop that writes the values for each block 
+	--Loop that writes the values for each block
 	for i=1, 70 do
 		local squareMeter = "Square" .. i
 		SKIN:Bang("!WriteKeyValue", squareMeter, "Meter", "Bar")
@@ -31,11 +30,11 @@ function Initialize()
 		local date = file:read("*line")
 		-- Set the X and Y position and meter style
 		local remainder = (i-1)%7
-		if i == 1 then 
+		if i == 1 then
 			SKIN:Bang("!WriteKeyValue", squareMeter, "MeterStyle", "SquareStyle")
 			SKIN:Bang('!WriteKeyValue', squareMeter, 'X', '20')
 				SKIN:Bang('!WriteKeyValue', squareMeter, 'Y', '15')
-		elseif remainder == 0 then 
+		elseif remainder == 0 then
 			SKIN:Bang("!WriteKeyValue", squareMeter, "MeterStyle", "SquareStyle | WeekStartStyle")
 		else
 			SKIN:Bang("!WriteKeyValue", squareMeter, "MeterStyle", "SquareStyle")
@@ -68,22 +67,25 @@ end
 
 
 
--- #### Update(): ##################################################################
--- The Update() function contains code that will be executed when the skin is automatically updated or 
--- manually refreshed, reducing the amount of work needed to update the skin.  
+-- #### Update() ####################################################################
+-- The Update() function contains code that will be executed when the skin is automatically updated or
+-- manually refreshed, reducing the amount of work needed to update the skin.
 -- ##############################################################################
 
 function Update( )
+	print("Updating")
 	local dataPath = SKIN:GetVariable('DataPath')
-	local checkFile = io.open(dataPath, "r") 
-	checkFile:read("*line") 
+	local checkFile = io.open(dataPath, "r")
+	checkFile:read("*line")
 	checkFile:read("*line")
 	local testDate = checkFile:read("*line")
 	-- checkFile.close()
 	local Meter = SKIN:GetMeter('Square1')
-	if testDate ~= Meter:GetOption('ToolTipText') then     --It's a new week
+	if testDate ~= Meter:GetOption('ToolTipText') then
+		--It's a new week
 		Initialize()
 	else
+		print("Current Week")
 		local weekPath = SKIN:GetVariable('WeekPath')
 		local file = io.open(weekPath, "r")
 		for i=64, 70 do
@@ -101,7 +103,7 @@ function Update( )
 			elseif color == "1e6823"  then
 				SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#Color4#")
 			else
-				SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#EmptyColor#")					
+				SKIN:Bang('!SetOption', squareMeter, 'SolidColor', "#EmptyColor#")
 			end
 			--Set square to display contributions on mouse-over action and date as tooltip
 			if(string.len(date) >= 8) then
@@ -112,6 +114,7 @@ function Update( )
 				SKIN:Bang('!SetOption', squareMeter, 'MouseOverAction', '[!SetOption Active Text ""][!UpdateMeter Active][!Redraw]')
 			end
 		end
+		-- file:close()
 	end
-	-- readFile.close()
+	return 1;
 end
