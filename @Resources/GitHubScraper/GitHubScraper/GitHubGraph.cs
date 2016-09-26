@@ -5,12 +5,12 @@ using System.Text;
 using OpenQA.Selenium;
 using OpenQA.Selenium.PhantomJS;
 
-/************************************************************************************ 
+/************************************************************************************
    _________________________________GitHubScraper__________________________________
- * This program uses Selenium's WebDriver & phantomJS, in order to scrape the 
+ * This program uses Selenium's WebDriver & phantomJS, in order to scrape the
  * contributions, fills, and active dates from a Github user's profile.
  *
- * To configure this file for your own use, replace the "Username" variable with 
+ * To configure this file for your own use, replace the "Username" variable with
  * your own GitHub username.
 
  ************************************************************************************/
@@ -18,7 +18,7 @@ using OpenQA.Selenium.PhantomJS;
 namespace GitHubScraper {
 
     class GraphScraper {
- 
+
         static void Main(){
             Console.SetWindowSize(50, 15);
             string username = File.ReadAllText(GetDirectory() + "/config.txt");
@@ -47,7 +47,7 @@ namespace GitHubScraper {
             } catch (NoSuchElementException e) {
                 Console.WriteLine(e);
             }
-            driver.Quit();   //close the webdriver  
+            driver.Quit();   //close the webdriver
             driver.Dispose();
 
             FillWeek(list);
@@ -66,7 +66,7 @@ namespace GitHubScraper {
 
         private static void FillWeek(ArrayList list) {
             // create placeholders for the rest of the week
-            int tbd = 6 - (int)DateTime.Now.DayOfWeek;
+            int tbd = 5 - (int)DateTime.Now.DayOfWeek;
             while(tbd > 0){
                 list.Add(new Block(0, "#eeeee", "TBD"));
                 tbd--;
@@ -75,7 +75,7 @@ namespace GitHubScraper {
 
         private static ArrayList GetCurrentWeek(ArrayList list){
             ArrayList weekData = new ArrayList();
-            for(int i = list.Count-8; i < list.Count; i++)
+            for(int i = list.Count-7; i < list.Count; i++)
                 weekData.Add(list[i]);
             return weekData;
         }
