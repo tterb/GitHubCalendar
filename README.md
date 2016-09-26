@@ -19,29 +19,27 @@
   <img src="https://github.com/JonSn0w/Rainmeter_GitHubCalendar/blob/master/@Resources/preview/Preview.gif" width="700" title="Preview">
   </p>
   <br>
-  
+
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Author*: Brett Stevenson  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Contact*: BStevensonDev@gmail.com  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Version*: 1.1  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE)
   <br>
-  
+
 *********************************************************************************************************  
-  
+
 ##DESCRIPTION:  
-  This skin features a C# program, which collectively uses [Selenium Webdriver](http://www.seleniumhq.org/projects/webdriver/) and [phantomJS](http://phantomjs.org) to gather the data from  
-  the user's GitHub profile and writes it to the "data.txt" file. The data is then read by the Lua script, which  
-  provides the necessary information to the GitHubCalendar skin.  
-    
+  This skin features a C# program, which collectively uses [Selenium Webdriver](http://www.seleniumhq.org/projects/webdriver/) and [phantomJS](http://phantomjs.org) to gather the data from the user's GitHub profile and writes it to the "data.txt" file. The data is then read by the Lua script, which provides the necessary information to the GitHubCalendar skin.  
+
 #### In Progress:  
-  * Improve optimmization of the update processes.  
+  * Improve optimization of the update processes.  
   * Experiment with different data collection methods.  
   * Add mutable scaling functionality to calendar.  
-  
+
   <br/>
 
 *********************************************************************************************************
-  
+
 ##SETUP:  
   * This skin requires that you have **Rainmeter** installed, which you can download [here](https://www.rainmeter.net/).
   * Open the *.rmskin* package file to install, configure, and load the skin.
@@ -49,7 +47,7 @@
   * Press the green button to load your GitHub Contribution Calendar.
   * **Enjoy!**  
 <br>
-  ***Note:*** To update the skin's calendar data, left-click the ![alt tag](https://cloud.githubusercontent.com/assets/16360374/18584256/670cf186-7bc4-11e6-9cae-a1e8b5f454ea.png) in the bottom-right corner of the skin. 
+  ***Note:*** To update the skin's calendar data, left-click the ![alt tag](https://cloud.githubusercontent.com/assets/16360374/18584256/670cf186-7bc4-11e6-9cae-a1e8b5f454ea.png) in the bottom-right corner of the skin.
 <br/>
 
 *********************************************************************************************************  
