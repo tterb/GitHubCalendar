@@ -4,7 +4,7 @@
 
 <p align="right">
   <a href="https://github.com/JonSn0w/GitHubCalendar/issues">
-    <img src="https://img.shields.io/github/issues-raw/badges/shields/website.svg?maxAge=2592000" height="21" title="Issues">
+    <img src="https://img.shields.io/github/issues-raw/badges/shields/website.svg?maxAge=2592000" height="21" title="Issues">&nbsp;
   </a>
   <a href="https://github.com/JonSn0w/GithubCalendar/releases">  
     <img src="https://img.shields.io/github/tag/strongloop/express.svg?maxAge=2592000" height="21" title="Tags">&nbsp;
