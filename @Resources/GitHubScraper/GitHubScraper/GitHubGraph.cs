@@ -66,7 +66,7 @@ namespace GitHubScraper {
 
         private static void FillWeek(ArrayList list) {
             // create placeholders for the rest of the week
-            int tbd = 5 - (int)DateTime.Now.DayOfWeek;
+            int tbd = 6 - (int)DateTime.Now.DayOfWeek;
             while(tbd > 0) {
                 list.Add(new Block(0, "#eeeee", "TBD"));
                 tbd--;
