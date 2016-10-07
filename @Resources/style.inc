@@ -1,6 +1,6 @@
 [Variables]
 Contribs=0
-EmptyColor=155,155,155,55
+EmptyColor=155,155,155,95
 Color1=239,255,158,200
 Color2=130,188,91,250
 Color3=80,155,75,250
@@ -26,7 +26,7 @@ W=165
 
 [LogoStyle]
 ImageName=#@#images/github_logo.png
-ImageTint=235,235,235,125
+ImageTint=235,235,235,155
 X=142
 Y=108
 H=18
@@ -75,4 +75,3 @@ StringStyle=Bold
 FontColor=230,230,230,240
 StringEffect=Shadow
 FontEffectColor = 0,0,0,200
-
