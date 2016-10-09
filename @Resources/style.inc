@@ -75,3 +75,21 @@ StringStyle=Bold
 FontColor=230,230,230,240
 StringEffect=Shadow
 FontEffectColor = 0,0,0,200
+
+[InfoTitle]
+Meter=String
+FontFace=#LocalFontFace#
+FontSize=19
+StringAlign=Center
+StringStyle=Bold
+FontColor=230,230,230,240
+StringEffect=Shadow
+FontEffectColor = 0,0,0,200
+
+[InfoText]
+Meter=String
+FontFace=Monospaced
+FontSize=11
+FontColor=230,230,230,240
+StringEffect=Shadow
+FontEffectColor = 0,0,0,150
