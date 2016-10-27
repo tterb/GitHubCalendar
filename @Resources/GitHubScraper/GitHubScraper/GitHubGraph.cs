@@ -55,8 +55,7 @@ namespace GitHubScraper {
             driver.Dispose();
             FillWeek(data);  // add placeholders to fill current week
             Console.WriteLine("Done.");
-            for(int i = 0; i < numWeeks; i++) // write data to file 
-                WriteToFile(GetWeek(data, i), GetDirectory("/data.txt"));
+            WriteToFile(data, GetDirectory("/data.txt"));
             WriteToFile(GetWeek(data, numWeeks-1), GetDirectory("/week.txt"));
             Environment.Exit(0); // Exit program
         }
@@ -90,6 +89,15 @@ namespace GitHubScraper {
 
         /* Writes the data to the provided .txt file */
         private static void WriteToFile(Block[] data, string dir) {
+            StreamWriter file = new StreamWriter(dir);
+            foreach(Block b in data)
+                if(b != null)
+                    file.WriteLine(b.ToString());
+            file.Close();
+        }
+
+        /* Writes the data to the provided .txt file */
+        private static void WriteToFile(Block[,] data, string dir) {
             StreamWriter file = new StreamWriter(dir);
             foreach(Block b in data)
                 if(b != null)
