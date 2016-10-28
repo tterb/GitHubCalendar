@@ -1,17 +1,17 @@
 <img src="https://cloud.githubusercontent.com/assets/16360374/18583398/322d04ba-7bbf-11e6-9964-c1958021561a.png" height="72" title="Logo">&nbsp; <img src="https://cloud.githubusercontent.com/assets/16360374/18583620/88d68768-7bc0-11e6-9baa-2380731c2bd0.png" height="70">
 ------------------------------------------------------------------------------------------------------------------------
-#### &nbsp;&nbsp;&nbsp;&nbsp;A Rainmeter skin that displays your GitHub contribution calendar on your desktop  
+#### &nbsp;&nbsp;&nbsp;&nbsp; A Rainmeter skin that displays your GitHub contribution calendar on your desktop  
 
 <p align="right">
   <a href="https://badge.fury.io/gh/JonSn0w%2FGitHubCalendar">
       <img src="https://badge.fury.io/gh/JonSn0w%2FGitHubCalendar.svg" height="21" alt="version" >
-  </a>&nbsp;
+  </a>
   <a href="https://github.com/JonSn0w/GitHubCalendar/issues">
     <img src="https://img.shields.io/github/issues-raw/JonSn0w/GithubCalendar.svg?maxAge=25920000" height="21" title="Issues">
-  </a>&nbsp;
+  </a>
   <a href="https://gitter.im/Atomic-Design-UI/Lobby">
         <img src="https://badges.gitter.im/GithubCalendar/Lobby.svg" height="21" title="Gitter">
-  </a>&nbsp;
+  </a>
   <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using Paypal">
  <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="21" title="Donate"></a></span>
 </p>
@@ -40,7 +40,7 @@
   * This skin requires that you have <img src="https://cloud.githubusercontent.com/assets/16360374/19179032/edf61afc-8c0d-11e6-897e-4f272410e316.png" height="18">&nbsp;[**Rainmeter**](https://www.rainmeter.net/) installed.
   * Open the *.rmskin* package file to install, configure, and load the skin.
   * Enter your GitHub username into the newly opened Configuration window and press 'Enter'.
-  * Then press the <img src="https://cloud.githubusercontent.com/assets/16360374/19801400/f0106b1a-9cb3-11e6-934a-2b220a70cdb0.png" height="22">&nbsp; button to load your GitHub Contribution Calendar.
+  * Then press the <img src="https://cloud.githubusercontent.com/assets/16360374/19801400/f0106b1a-9cb3-11e6-934a-2b220a70cdb0.png" height="22">&nbsp;button to load your GitHub Contribution Calendar.
   * **Enjoy!**  
 <br>
   ***Note:*** To update the skin's calendar data, left-click the <img src="https://cloud.githubusercontent.com/assets/16360374/18584256/670cf186-7bc4-11e6-9cae-a1e8b5f454ea.png" height="20"> in the bottom-right corner of the skin.
