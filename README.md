@@ -1,19 +1,19 @@
-<img src="https://cloud.githubusercontent.com/assets/16360374/18583398/322d04ba-7bbf-11e6-9964-c1958021561a.png" height="75" title="Logo">  <img src="https://cloud.githubusercontent.com/assets/16360374/18583620/88d68768-7bc0-11e6-9baa-2380731c2bd0.png" height="70">
+<img src="https://cloud.githubusercontent.com/assets/16360374/18583398/322d04ba-7bbf-11e6-9964-c1958021561a.png" height="72" title="Logo">  <img src="https://cloud.githubusercontent.com/assets/16360374/18583620/88d68768-7bc0-11e6-9baa-2380731c2bd0.png" height="70">
 ------------------------------------------------------------------------------------------------------------------------
 #### &nbsp;&nbsp;&nbsp;&nbsp;A Rainmeter skin that displays your GitHub contribution calendar on your desktop  
 
 <p align="right">
+  <a href="https://badge.fury.io/gh/JonSn0w%2FGitHubCalendar">
+      <img src="https://badge.fury.io/gh/JonSn0w%2FGitHubCalendar.svg" height="21" alt="version" >
+  </a>&nbsp;
   <a href="https://github.com/JonSn0w/GitHubCalendar/issues">
     <img src="https://img.shields.io/github/issues-raw/badges/shields/website.svg?maxAge=2592000" height="21" title="Issues">&nbsp;
-  </a>
-  <a href="https://github.com/JonSn0w/GithubCalendar/releases">  
-    <img src="https://img.shields.io/github/tag/strongloop/express.svg?maxAge=2592000" height="21" title="Tags">&nbsp;
-  </a>
-  <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using Paypal">
- <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="21" title="Donate"></a></span>&nbsp;
+  </a>&nbsp;
   <a href="https://gitter.im/Atomic-Design-UI/Lobby">
         <img src="https://badges.gitter.im/GithubCalendar/Lobby.svg" height="21" title="Gitter">
-  </a>
+  </a>&nbsp;
+  <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using Paypal">
+ <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="21" title="Donate"></a></span>&nbsp;
 </p>
 
 <br>
