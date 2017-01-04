@@ -1,6 +1,6 @@
 [Variables]
 Contribs=0
-EmptyColor=155,155,155,95
+EmptyColor=175,175,175,95
 Color1=239,255,158,200
 Color2=130,188,91,250
 Color3=80,155,75,250
@@ -18,10 +18,10 @@ ProfilePath="https://github.com/#USERNAME#"
 
 [BackgroundStyle]
 ImageName=#@#images/background.png
-ImageTint=0,0,0,80
+ImageTint=0,0,0,60
 X=0
-Y=0
-H=130
+Y=3
+H=127
 W=165
 
 [LogoStyle]
