@@ -62,9 +62,9 @@ namespace GitHubScraper {
 
 
         /* returns @Resource directory + filename */
-        private static string GetDirectory(string filename) { 
+        private static string GetDirectory(string filename) {
             string path = Directory.GetCurrentDirectory();
-            return path.Substring(0, path.Length - 37) + filename; 
+            return path.Substring(0, path.Length - 37) + filename;
         }
 
 
@@ -73,7 +73,7 @@ namespace GitHubScraper {
             int tbd = 6 - (int)DateTime.Now.DayOfWeek;
             while(tbd > 0) {
                 int x = 6 - tbd;
-                data[numWeeks-1, x] = new Block(0, "#eeeee", "TBD");
+                data[numWeeks-1, x] = new Block(0, "#eeeeee", "TBD");
                 tbd--;
             }
         }
