@@ -43,6 +43,7 @@
   * Then press the <img src="https://cloud.githubusercontent.com/assets/16360374/19801400/f0106b1a-9cb3-11e6-934a-2b220a70cdb0.png" height="22">&nbsp;button to load your GitHub Contribution Calendar.
   * **Enjoy!**  
 <br>
+
   ***Note:*** To update the skin's calendar data, left-click the <img src="https://cloud.githubusercontent.com/assets/16360374/18584256/670cf186-7bc4-11e6-9cae-a1e8b5f454ea.png" height="20"> in the bottom-right corner of the skin.
 <br/>
 
